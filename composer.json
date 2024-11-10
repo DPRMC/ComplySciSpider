@@ -1,0 +1,27 @@
+{
+    "name": "dprmc/comply-sci-spider",
+    "description": "A library to pragmatically access the complysci web ui.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DPRMC\\ComplySciSpider\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael Drennen",
+            "email": "michaeldrennen74@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^11.4"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "chrome-php/chrome": "^1.11",
+        "ext-dom": "*",
+        "nesbot/carbon": "^3.8"
+    }
+}

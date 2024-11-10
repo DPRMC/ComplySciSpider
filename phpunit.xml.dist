@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false"
+         stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <report>
+            <clover outputFile="build/logs/clover.xml"/>
+            <html outputDirectory="./build/coverage/html" lowUpperBound="35" highLowerBound="70"/>
+        </report>
+    </coverage>
+    <testsuites>
+        <testsuite name="ComplySci Spider Test Suite">
+            <directory suffix=".php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="COMPANY_NAME" value="mycompany"/>
+        <env name="USERNAME" value="complysci_username"/>
+        <env name="PASSWORD" value="complysci_password"/>
+        <env name="CHROME_PATH" value="/path/to/chrome"/>
+        <env name="PATH_TO_SCREENSHOTS" value="/path/to/screenshots"/>
+        <env name="USER_AGENT_STRING" value="Chrome or Something"/>
+        <env name="CACHE_FILEPATH" value="/path/to/cache/files/"/>
+    </php>
+    <logging/>
+</phpunit>
